@@ -37,6 +37,6 @@ The features that are used for prediction are:
 - `total_rec_late_fee`: Late fees received to date
 
 The predictions are categorized into three categories:
-- Category 1: Loans fully paid off, with no late payments
-- Category 2: Loans paid back, but late
-- Category 3: Loans never fully paid back
+- Category 1 (coded as 0): Loans fully paid off, with no late payments
+- Category 2 (coded as 1): Loans paid back, but late
+- Category 3 (coded as 2): Loans never fully paid back
