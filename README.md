@@ -1,6 +1,8 @@
 # Statistics and ML using Spark and Hadoop Cluster
 
-This repository contains two scripts that can be used on [LendingClub](https://www.lendingclub.com/) data that is stored on Apache Hadoop clusters in a parquet format. 
+This repository contains two scripts that can be used on [LendingClub](https://www.lendingclub.com/) data that is stored on Apache Hadoop clusters in a parquet format.
+
+## Monthly summary statistics
 
 `monthly_report.py` can generate monthly summary statistics consisting of: 
 - Total number of loans issued
@@ -17,9 +19,11 @@ This repository contains two scripts that can be used on [LendingClub](https://w
 - Percentage of fully paid loans for grade F loans
 - Percentage of loans on a hardship payment plan
 
+The Spark data frame is saved as a csv file to the Hadoop Distributed File System (HDFS) hosted on Azure.
+
 ## Machine learning pipeline for predicting loan status
 
-`predict_loan_status.py` produces F1 scores and accuracy for loan status prediction using decision trees, random forest, and multi-layer perceptrons and saves the metrics as a csv to the Hadoop Distributed File System (HDFS).
+`predict_loan_status.py` produces F1 scores and accuracy for loan status prediction using decision trees, random forest, and multi-layer perceptrons and saves the metrics as a csv to HDFS.
 
 The features that are used for prediction are:
 - `annual_inc`: The self-reported annual income provided by the borrower during registration
