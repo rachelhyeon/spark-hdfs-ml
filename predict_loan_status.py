@@ -130,7 +130,3 @@ test_metrics = spark.createDataFrame(
      "F1 Score of Random Forest", "Accuracy of Random Forest",
      "F1 Score of Multilayer Perceptron", "Accuracy of Multilayer Perceptron"]
 )
-
-# Save test set metrics to a file
-test_metrics.write.csv("hdfs://10.0.0.4:9000/mhyeon/mhyeon-hw03.csv",
-                       header=True, mode="overwrite")
